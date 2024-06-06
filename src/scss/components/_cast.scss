@@ -5,7 +5,7 @@
 			position: relative;
 		}
 	}
-	&__title {
+	&__header {
 		margin-bottom: 24px;
 	}
 	&__slider {
@@ -52,6 +52,11 @@
 			}
 		}
 	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 	&__pagination {
 		position: static;
 		margin-bottom: 32px;
@@ -60,9 +65,7 @@
 		--swiper-pagination-color: var(--red-color);
 	}
 	&__navigation {
-		position: absolute;
-		right: 0;
-		top: 8px;
+		position: static !important;
 		display: flex;
 		gap: 24px;
 	}
@@ -123,6 +126,7 @@
 
 @media (max-width: 768px) {
 	.cast {
+		padding: 64px 0;
 		&__pagination {
 			margin-bottom: 24px;
 		}
@@ -131,7 +135,8 @@
 
 @media (max-width: 480px) {
 	.cast {
-		&__title {
+		padding-top: 16px;
+		&__header {
 			margin-bottom: 16px;
 		}
 		&__button {
