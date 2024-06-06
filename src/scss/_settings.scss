@@ -45,6 +45,18 @@ html {
 	max-width: var(--container-width);
 }
 
+@media (max-width: 768px) {
+	.container {
+		padding: 0 64px;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 0 16px;
+	}
+}
+
 @media (max-width: 355px) {
 	.container {
 		padding: 0 10px;
