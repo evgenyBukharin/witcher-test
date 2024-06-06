@@ -1,6 +1,6 @@
 .hero {
 	padding: 100px 0;
-	background-image: url(../img/hero-bg-full.webp), linear-gradient(to right, var(--black-color), transparent);
+	background-image: url(../img/hero-bg-full.png), linear-gradient(to right, var(--black-color), transparent);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -22,7 +22,7 @@
 @media (max-width: 768px) {
 	.hero {
 		padding: 60px 0 76px;
-		background-image: url(../img/hero-bg-768.webp), linear-gradient(to right, var(--black-color), transparent);
+		background-image: url(../img/hero-bg-768.png), linear-gradient(to right, var(--black-color), transparent);
 		&__content {
 			max-width: 370px;
 		}
@@ -35,7 +35,7 @@
 @media (max-width: 480px) {
 	.hero {
 		padding: 56px 0 73px;
-		background-image: url(../img/hero-bg-360.webp), linear-gradient(to right, var(--black-color), transparent);
+		background-image: url(../img/hero-bg-360.png), linear-gradient(to right, var(--black-color), transparent);
 		&__content {
 			max-width: 280px;
 		}
