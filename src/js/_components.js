@@ -1,1 +1,1 @@
-// import "./components/example-module";
+import "./components/slider";

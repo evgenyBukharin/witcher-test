@@ -1,0 +1,148 @@
+.cast {
+	padding: 72px 0;
+	&__container {
+		&-paddingless {
+			position: relative;
+		}
+	}
+	&__title {
+		margin-bottom: 24px;
+	}
+	&__slider {
+		overflow: visible;
+	}
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+	&__content {
+		padding: 24px;
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		&-hidden {
+			color: var(--white-color);
+			font-size: 16px;
+			line-height: 125%;
+			margin-top: 24px;
+		}
+	}
+	&__slide {
+		position: relative;
+		display: flex;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+		overflow: hidden;
+		&-visible {
+			opacity: 1;
+			visibility: visible;
+			& + .cast__slide {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&:hover {
+			& .cast__content {
+				background: rgba(0, 0, 0, 0.6);
+				transform: translateY(0) !important;
+			}
+		}
+	}
+	&__pagination {
+		position: static;
+		margin-bottom: 32px;
+		height: 2px !important;
+		background: var(--grey-color);
+		--swiper-pagination-color: var(--red-color);
+	}
+	&__navigation {
+		position: absolute;
+		right: 0;
+		top: 8px;
+		display: flex;
+		gap: 24px;
+	}
+	&__button {
+		position: relative;
+		cursor: pointer;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			&::before,
+			&::after {
+				background: var(--red-color);
+				box-shadow: 0 -2px 12px 0 var(--red-color);
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			width: 2px;
+			height: 23px;
+			background: var(--light-red-color);
+			border-radius: 1px;
+			position: absolute;
+			top: 4px;
+			right: 70%;
+			transform: translateY(-46%);
+			rotate: 45deg;
+			transition: background 0.3s ease, box-shadow 0.3s ease;
+		}
+		&::after {
+			rotate: 135deg;
+		}
+		&-next {
+			&::after,
+			&::before {
+				left: 70%;
+			}
+			&::before {
+				rotate: 225deg;
+			}
+			&::after {
+				rotate: -45deg;
+			}
+		}
+		&-disabled {
+			&::before,
+			&::after {
+				background: var(--grey-color) !important;
+				box-shadow: none !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.cast {
+		&__pagination {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.cast {
+		&__title {
+			margin-bottom: 16px;
+		}
+		&__button {
+			width: 28px;
+			height: 28px;
+			&::after,
+			&::before {
+				height: 20px;
+			}
+		}
+		&__navigation {
+			gap: 12px;
+		}
+	}
+}
