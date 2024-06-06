@@ -1,16 +1,3 @@
-// ymaps.ready(init);
-// function init() {
-// 	if (document.getElementById("map") !== null) {
-// 		let map = new ymaps.Map("map", {
-// 			center: [55.75244503863624, 37.62157801586914],
-// 			zoom: 12,
-// 		});
-// 	} else {
-// 		return;
-// 	}
-
-// }
-
 let markersCoords = [
 	[37.63825115316776, 55.746233699267094],
 	[37.49954876058963, 55.749332055586926],
