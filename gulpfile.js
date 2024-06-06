@@ -32,7 +32,7 @@ const ghPages = require("gh-pages");
 
 // paths
 const srcFolder = "./src";
-const buildFolder = "./app";
+const buildFolder = "./public";
 const paths = {
 	srcSvg: `${srcFolder}/img/svg/**.svg`,
 	srcImgFolder: `${srcFolder}/img`,
@@ -319,7 +319,7 @@ const cache = () => {
 };
 
 const rewrite = () => {
-	const manifest = readFileSync("app/rev.json");
+	const manifest = readFileSync("public/rev.json");
 	src(`${paths.buildCssFolder}/*.css`)
 		.pipe(
 			revRewrite({
@@ -377,6 +377,6 @@ exports.cache = series(cache, rewrite);
 exports.zip = zipFiles;
 
 function deploy(cb) {
-	ghPages.publish(path.join(process.cwd(), "./app"), cb);
+	ghPages.publish(path.join(process.cwd(), "./public"), cb);
 }
 exports.deploy = deploy;
