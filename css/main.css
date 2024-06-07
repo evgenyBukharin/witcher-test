@@ -11,7 +11,17 @@
 	--grey-color: #717171;
 	--dark-grey-color: #343338;
 }
-
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+	opacity: 1;
+}
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+	outline: red solid 2px;
+	outline-offset: 2px;
+}
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+	opacity: 0.4;
+	pointer-events: none;
+}
 @font-face {
 	font-family: FuturaPT;
 	src: url(../fonts/FuturaPT-400.woff2) format("woff2");
@@ -70,6 +80,11 @@ html {
 	padding: 0;
 	background-color: transparent;
 	cursor: pointer;
+}
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 .container {
 	margin: 0 auto;

@@ -10699,7 +10699,7 @@
 				480: {
 					slidesPerView: 2.35,
 				},
-				769: {
+				869: {
 					slidesPerView: 4,
 				},
 			},
